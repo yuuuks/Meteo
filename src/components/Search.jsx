@@ -15,8 +15,11 @@ const Search = (props) => {
   }, [inputValue]);
 
   useEffect(() => {
-    if (inputValue.length >= 3) {
+    if (inputValue.length >= 2) {
       getData();
+    } else {
+      // Effacez les suggestions lorsque l'input est vide
+      setList([]);
     }
   }, [getData, inputValue]);
 
