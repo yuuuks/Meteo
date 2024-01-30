@@ -18,7 +18,6 @@ const Search = (props) => {
     if (inputValue.length >= 2) {
       getData();
     } else {
-      // Effacez les suggestions lorsque l'input est vide
       setList([]);
     }
   }, [getData, inputValue]);
